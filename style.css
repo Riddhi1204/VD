@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #4a0033;
+}
+
+/* Floating hearts */
+.hearts span {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+/* Music button */
+#playBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff5c8d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Main card */
+.container {
+  background: rgba(255,255,255,0.9);
+  padding: 40px 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255,105,180,0.4);
+  max-width: 320px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+#yesBtn {
+  background: #ff5c8d;
+  color: white;
+}
+
+#noBtn {
+  background: #ccc;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Message */
+#message {
+  margin-top: 25px;
+}
+
+#timer {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ff5c8d;
+}
+
+.hidden {
+  display: none;
+}
