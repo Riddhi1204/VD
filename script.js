@@ -22,6 +22,7 @@ yesBtn.addEventListener("click", () => {
   message.classList.remove("hidden");
   document.querySelector(".buttons").style.display = "none";
   launchHearts();
+  startHindiReveal();
 });
 
 /* Floating hearts background */
@@ -63,3 +64,39 @@ setInterval(() => {
     since 24 September 2025 ♾️
   `;
 }, 1000);
+
+/* ===== Hindi Typing + Reveal ===== */
+
+const hindiLines = [
+  "Tum meri zindagi ka sabse khoobsurat hissa ho 💞",
+  "Har din tumhare saath aur bhi special lagta hai ✨",
+  "Tum ho toh sab kuch perfect lagta hai 💋",
+  "Hamesha mere hi rehna ❤️"
+];
+
+function typeLine(element, text, speed = 40) {
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    }
+  }
+  typing();
+}
+
+function startHindiReveal() {
+  const container = document.getElementById("hindiBlock");
+  const lines = document.querySelectorAll(".hindi-line");
+
+  container.classList.remove("hidden");
+  container.classList.add("show");
+
+  lines.forEach((line, index) => {
+    setTimeout(() => {
+      typeLine(line, hindiLines[index]);
+    }, index * 2000);
+  });
+}
+
