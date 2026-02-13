@@ -130,3 +130,37 @@ button:hover {
   transform: scale(1.1);
   box-shadow: 0 15px 35px rgba(255,105,180,0.6);
 }
+
+/* ===== Hindi Section ===== */
+
+.hindi-container {
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.hindi-container.show {
+  opacity: 1;
+}
+
+.hindi-line {
+  font-family: 'Hind', sans-serif;
+  font-size: 1.05rem;
+  margin: 8px 0;
+  color: #ff4f81;
+  text-align: center;
+  min-height: 24px;
+  position: relative;
+}
+
+/* glowing heart animation */
+.hindi-line::after {
+  content: " 💖";
+  animation: heartGlow 1.5s infinite alternate;
+}
+
+@keyframes heartGlow {
+  from { text-shadow: 0 0 5px #ff7aa8; }
+  to { text-shadow: 0 0 15px #ff2f6d; }
+}
+
