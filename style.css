@@ -51,7 +51,7 @@ body {
   border-radius: 25px;
   text-align: center;
   box-shadow: 0 0 30px rgba(255,105,180,0.4);
-  max-width: 380px;
+  max-width: 420px;
   width: 90%;
 }
 
@@ -107,26 +107,26 @@ button:hover {
   display: none;
 }
 
-/* ===== PHOTO GALLERY (FIXED VERSION) ===== */
+/* ===== PHOTO GALLERY ===== */
 
 .gallery {
-  margin-top: 18px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .gallery img {
-  width: 85px;
-  height: 110px;
+  width: 100px;
+  height: 130px;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gallery img:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
   box-shadow: 0 15px 35px rgba(255,105,180,0.6);
 }
