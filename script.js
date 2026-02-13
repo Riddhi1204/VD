@@ -22,6 +22,7 @@ yesBtn.addEventListener("click", () => {
   message.classList.remove("hidden");
   document.querySelector(".buttons").style.display = "none";
   launchHearts();
+  startLoveTimer();
   startHindiReveal();
 });
 
@@ -45,37 +46,41 @@ function launchHearts() {
   }
 }
 
-/* ❤️ LOVE TIMER (24 Sept 2025 → forever) */
-const startDate = new Date("2025-09-24T00:00:00");
+/* ❤️ LOVE TIMER (starts after YES) */
+function startLoveTimer() {
+  const startDate = new Date("2025-09-24T00:00:00");
 
-setInterval(() => {
-  const now = new Date();
-  let diff = now - startDate;
+  setInterval(() => {
+    const now = new Date();
+    let diff = now - startDate;
 
-  const days = Math.floor(diff / 86400000);
-  diff %= 86400000;
-  const hours = Math.floor(diff / 3600000);
-  diff %= 3600000;
-  const minutes = Math.floor(diff / 60000);
-  const seconds = Math.floor((diff % 60000) / 1000);
+    const days = Math.floor(diff / 86400000);
+    diff %= 86400000;
+    const hours = Math.floor(diff / 3600000);
+    diff %= 3600000;
+    const minutes = Math.floor(diff / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
 
-  timer.innerHTML = `
-    💞 ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds<br>
-    since 24 September 2025 ♾️
-  `;
-}, 1000);
+    timer.innerHTML = `
+      💞 ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds<br>
+      since 24 September 2025 ♾️
+    `;
+  }, 1000);
+}
 
 /* ===== Hindi Typing + Reveal ===== */
 
 const hindiLines = [
-  "आपके लिए मंदिर जाऊं",
+  "आपके लिए मंदिर जाऊं 💞",
   "आपके नाम का दिया जलाऊँ 🧿❤️",
   "आपके लिए हम बने हैं 🥺",
   "आपके लिए बदल रहे हैं 🐥"
 ];
 
 function typeLine(element, text, speed = 40) {
+  element.textContent = "";
   let i = 0;
+
   function typing() {
     if (i < text.length) {
       element.textContent += text.charAt(i);
@@ -99,4 +104,3 @@ function startHindiReveal() {
     }, index * 2000);
   });
 }
-
