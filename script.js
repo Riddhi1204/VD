@@ -68,10 +68,10 @@ setInterval(() => {
 /* ===== Hindi Typing + Reveal ===== */
 
 const hindiLines = [
-  "Tum meri zindagi ka sabse khoobsurat hissa ho 💞",
-  "Har din tumhare saath aur bhi special lagta hai ✨",
-  "Tum ho toh sab kuch perfect lagta hai 💋",
-  "Hamesha mere hi rehna ❤️"
+  "आपके लिए मंदिर जाऊं",
+  "आपके नाम का दिया जलाऊँ 🧿❤️",
+  "आपके लिए हम बने हैं 🥺",
+  "आपके लिए बदल रहे हैं 🐥"
 ];
 
 function typeLine(element, text, speed = 40) {
